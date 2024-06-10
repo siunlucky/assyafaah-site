@@ -337,6 +337,14 @@ p {
     color: inherit;
 }
 
+.nav-about-dropdown-item{
+    color: white; padding: 0.5rem 0 0 1rem
+}
+
+.nav-about-dropdown-item:hover {
+    color:#df1f29;
+}
+
 /* 2.2 Burger button */
 
 .hamburger {
@@ -1134,21 +1142,12 @@ p {
     margin: 1em 0;
 }
 
-.about__info__management_board__container{
-    width: 70%;
-}
-
 .about__info__management_board {
-    display: flex;
-    flex-direction: row;
-}
-
-.about__info__management_board__header {
-    font-weight: 500;
+    margin: 3em 0;
 }
 
 .about__info__management_board_img{
-    width: 30%;
+    width: 75%;
     object-fit: cover;
 
 }
@@ -1383,5 +1382,10 @@ footer {
     .about__info__management_board {
         display: flex;
         flex-direction: column;
+    }
+
+    .about__info__management_board_img{
+        width: 100%;
+        margin: 0 3rem;
     }
 }

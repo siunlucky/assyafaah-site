@@ -76,6 +76,23 @@ function PageTransition() {
             });
         }
     });
+
+    // i want if user hover the nav-about-dropdown, the nav-about-dropdown-content will be shown
+    // $('#nav-about-dropdown').hover(function() { // when user hover the nav-about-dropdown
+    //     $('#nav-about-dropdown-content').css('display', 'block'); // the nav-about-dropdown-content will be shown
+    // }, function() { // when user stop hover the nav-about-dropdown
+    //     $('#nav-about-dropdown-content').css('display', 'none'); // the nav-about-dropdown-content will be hidden
+    // });
+
+    // make it click
+    $('#nav-about-dropdown').click(function() {
+        if ($('#nav-about-dropdown-content').css('display') == 'block') {
+            $('#nav-about-dropdown-content').css('display', 'none');
+            return;
+        }
+        $('#nav-about-dropdown-content').css('display', 'block');
+    });
+
 }
 
 /*------------------
