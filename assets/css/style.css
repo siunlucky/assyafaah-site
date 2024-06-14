@@ -219,6 +219,11 @@ p {
 [class*="socicon-"]:hover {
   opacity: .4;
 }
+
+.social-media-icon {
+    width: 50px;
+    height: 50px;
+}
 /* 1.3 Button */
 
 .ms-button {
@@ -337,11 +342,11 @@ p {
     color: inherit;
 }
 
-.nav-about-dropdown-item{
+.nav-about-dropdown-item, .nav-get-in-touch-dropdown-item, .nav-touch-other-hearts-dropdown-item{
     color: white; padding: 0.5rem 0 0 1rem
 }
 
-.nav-about-dropdown-item:hover {
+.nav-about-dropdown-item:hover, .nav-get-in-touch-dropdown-item:hover, .nav-touch-other-hearts-dropdown-item:hover  {
     color:#df1f29;
 }
 
@@ -1231,8 +1236,109 @@ footer {
     padding-left: 15px;
 }
 
+ /**
+ * 11. Table
+ */
+
+#sheet {
+	text-align: left;
+	width: 100vw;
+	max-width: 550px;
+	margin: 10px auto;
+	padding: 10px;
+	border: 2px solid #d0d0d5;
+}
+
+tr {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	border-bottom: 1px solid #0a0a23;
+	border: none;
+	margin: 10px 0;
+	padding: 4px;
+}
+
+.data,
+#years {
+	border-bottom: 1px solid black;
+}
+
+/* Teach here the nth-child looks at all children,
+but nth of type looks only at same tag name.*/
+.sub-header {
+	background-color: #d0d0d5;
+    font-weight: bold;
+}
+
+/* Ignore the name, so we can justify those to the left */
+td:not(.name):not(.notes) {
+	margin-left: 10px;
+	min-width: 25%;
+	text-align: right;
+}
+
+.name {
+	width: 100%;
+	text-align: left;
+}
+
+.notes {
+	width: 100%;
+	text-align: left;
+	font-style: italic;
+}
+
+tr[class="total"] {
+	border-bottom: 4px double #0a0a23;
+	font-weight: bold;
+}
+
+/* Using this selector assures that only rows with some 
+tab index will interact on hover */
+tr[class~="total"]:hover {
+	background-color: #99c9ff;
+}
+
+/* Explain that this is true when tab indexed or clicked */
+tr[class~="total"]:focus {
+	background-color: #198eee;
+	color: white;
+}
+
+/* Will make the current year column italic */
+td[class="current"] {
+	font-style: italic;
+}
+
+/* Selects all th that are children of tr */
+tr:not(#header):not(#subheader) > th {
+	color: #356eaf;
+	font-size: 1.3em;
+	padding: 0;
+	width: 100%;
+	font-weight: normal;
+}
+
+#header > th {
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	background-color: transparent;
+	font-size: 2em;
+}
+
+#subheader > th {
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	background-color: transparent;
+	font-size: 1.3em;
+}
+
+
 /**
- * 11. Responsive Rules
+ * 12. Responsive Rules
  */
 
 @media only screen and (max-width: 805px) {
