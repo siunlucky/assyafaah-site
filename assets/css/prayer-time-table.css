@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+    padding: 20px;
+}
+
+td {
+    border-bottom: #ebd0aa 2px dashed;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+    color: #6d6b69;
+}
+
+th {
+    border-bottom: #ebd0aa 2px solid;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+th:first-child {
+    text-align: left;
+}
+
+th:last-child, td:last-child {
+    text-align: right;
+}
+

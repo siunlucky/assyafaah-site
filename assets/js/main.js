@@ -110,7 +110,7 @@ function Menu() {
             loop: false,
             speed: 1000,
             grabCursor: false,
-            mousewheel: true,
+            
             keyboard: true,
             simulateTouch: false,
             parallax: true,
@@ -247,7 +247,22 @@ function Dropdown() {
         }
         $('#nav-touch-other-hearts-content').css('display', 'none');
         $('#nav-get-in-touch-dropdown-content').css('display', 'none');
+        $('#nav-our-program-dropdown-content').css('display', 'none');
+        $('#nav-media-dropdown-content').css('display', 'none');
         $('#nav-about-dropdown-content').css('display', 'block');
+        return;
+    });
+
+    $('#nav-our-program-dropdown').click(function() {
+        if ($('#nav-our-program-dropdown-content').css('display') == 'block') {
+            $('#nav-our-program-dropdown-content').css('display', 'none');
+            return;
+        }
+        $('#nav-touch-other-hearts-content').css('display', 'none');
+        $('#nav-get-in-touch-dropdown-content').css('display', 'none');
+        $('#nav-about-dropdown-content').css('display', 'none');
+        $('#nav-media-dropdown-content').css('display', 'none');
+        $('#nav-our-program-dropdown-content').css('display', 'block');
         return;
     });
 
@@ -258,6 +273,8 @@ function Dropdown() {
         }
         $('#nav-get-in-touch-dropdown-content').css('display', 'none');
         $('#nav-about-dropdown-content').css('display', 'none');
+        $('#nav-our-program-dropdown-content').css('display', 'none');
+        $('#nav-media-dropdown-content').css('display', 'none');
         $('#nav-touch-other-hearts-dropdown-content').css('display', 'block');
         return;
     });
@@ -268,8 +285,23 @@ function Dropdown() {
             return;
         }
         $('#nav-touch-other-hearts-content').css('display', 'none');
+        $('#nav-our-program-dropdown-content').css('display', 'none');
+        $('#nav-about-dropdown-content').css('display', 'none')
+        $('#nav-media-dropdown-content').css('display', 'none');
         $('#nav-get-in-touch-dropdown-content').css('display', 'block');
+        return;
+    });
+
+    $('#nav-media-dropdown').click(function() {
+        if ($('#nav-media-dropdown-content').css('display') == 'block') {
+            $('#nav-media-dropdown-content').css('display', 'none');
+            return;
+        }
+        $('#nav-touch-other-hearts-content').css('display', 'none');
+        $('#nav-our-program-dropdown-content').css('display', 'none');
         $('#nav-about-dropdown-content').css('display', 'none');
+        $('#nav-get-in-touch-dropdown-content').css('display', 'none');
+        $('#nav-media-dropdown-content').css('display', 'block');
         return;
     });
 }
